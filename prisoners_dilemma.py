@@ -116,9 +116,15 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             return 'c'
 
     
-        
-            
-                
+    # This player mimics the opponents previous move
+    class CopyCat:
+        def strategy(self, opponent):
+            return opponent.history[-1]
+            except IndexError:
+                return 'C'
+        def __repr__(self):
+            return 'CopyCat'
+          
                     
                             
     ######
